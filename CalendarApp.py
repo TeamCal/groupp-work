@@ -9,8 +9,9 @@ class Calendar(object):
 		self.ListCalendar = []
 
 	def switch(self):
+		print('---------------------------------------------------------------------')
 		print('Welcome to Calendar App; ')
-		print('--------------------------------------')
+		print('---------------------------------------------------------------------')
 		
 		input1=input(" Type one (1) to create new calendar:   ")
 		if str(input1).isdigit() and int(input1) == 1:
@@ -19,8 +20,8 @@ class Calendar(object):
 			print("New Calendar: %s        "%input2)
 			print("New Calendar %s  has been created."%input2)
 			#self.TestCalendar()
-			print('--------------------------------------')
-			print('--------------------------------------')
+			print('--------------------------------------------------------------')
+			print('--------------------------------------------------------------')
 			
 			while self.que is True:
 				print('kindly select ')
@@ -28,13 +29,13 @@ class Calendar(object):
 				input5= input('2: to exit and view your events:')
 				if str(input5).isdigit() and int(input5)==1:
 					self.setCalendar()
-					print('--------------------------------------')
+					print('-------------------------------------------------')
 				'''if str(input5).isdigit() and int(input5)==2: 
 					self.viewCalendar()'''
 				if str(input5).isdigit() and int(input5)==2:
 					self.que = False
 					self.viewCalendar()
-					print('--------------------------------------')
+					print('-------------------------------------------------------')
 				'''else:
 					self.setCalendar()'''
 		else:
@@ -45,10 +46,14 @@ class Calendar(object):
 		self.input2 = {self.date:'Date', self.eventName:'Event Name'}
 		#od = OrderedDict(zip(self.input2))
 		print (self.input2)
-		print(self.ListCalendar) 
-		
+		print("This is the last item in your calendar:") 
+		print(self.ListCalendar[-1])
+		print('---------------------------------------------------------')
+		print('**********************************************)
+		print ('     Thank you for using our app!           ')
 		
 	def setCalendar(self):
+		print('-------------------------------------------------------')
 		input3 = input("Good work! Write your event name:    ")
 		input4 = input("Set the date(dd-mm-yyyy) for your event %s:   "%input3)
 		self.date = input3
